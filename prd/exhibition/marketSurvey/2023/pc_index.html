@@ -1,0 +1,217 @@
+<style>
+  @media screen and (min-width: 1024px) {
+    #ad_m_index_popup,
+    #ad_m_curate_index_top,
+    #ad_m_curate_index_list1,
+    #ad_m_curate_index_list2,
+    #ad_m_curate_index_list3,
+    #car_m_index_d1,
+    #ad_m_curate_index_bottom {
+      display: none !important;
+    }
+  }
+  #ad_pc_curate_index_top,
+  #ad_pc_index_top1,
+  #ad_pc_index_top2,
+  #ad_pc_curate_index_mid,
+  #ad_pc_curate_index_mid2,
+  #ad_pc_curate_index_mid3 {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  #car_pc_index_d1 {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    position: sticky;
+  }
+</style>
+
+<script>
+    window.googletag = window.googletag || { cmd: [] };
+
+    //GAM360_index_top-top2
+  function defineAndDisplayAd(slotPath, dimensions, elementId, adDivId, minWidth, minHeight) {
+    window.googletag.cmd.push(function() {
+      window.googletag
+        .defineSlot(slotPath, dimensions, adDivId)
+        .setCollapseEmptyDiv(true, true)
+        .addService(googletag.pubads())
+        .setTargeting("Car_channel", {{getExhibitionName}});
+      googletag.pubads().enableSingleRequest();
+      googletag.pubads().collapseEmptyDivs();
+      googletag.enableServices();
+    });
+
+    var adDiv = document.createElement("div");
+    adDiv.id = adDivId;
+    adDiv.style.minWidth = minWidth;
+    adDiv.style.minHeight = minHeight;
+    var targetElement = document.getElementById(elementId);
+    if(targetElement){
+      targetElement.appendChild(adDiv);
+    }
+
+    googletag.cmd.push(function() {
+      googletag.display(adDivId);
+      googletag.pubads().refresh();
+    });
+  }
+
+  // car_pc_index_d1
+  defineAndDisplayAd(
+    '/31610311/car_pc_index_d1',
+    [[1, 1], [728, 90]],
+    'car_pc_index_d1',
+    'div-gpt-ad-1696237834160-0',
+    "728px",
+    '90px'
+  );
+
+  // car_pc_curate_index_top
+  defineAndDisplayAd(
+    '/31610311/car_pc_curate_index_top',
+    [[1, 1], [970, 250]],
+    'ad_pc_curate_index_top',
+    'div-gpt-ad-1725868394390-0',
+    "970px",
+    '250px'
+  );
+
+  // car_pc_curate_index_mid
+  defineAndDisplayAd(
+    '/31610311/car_pc_curate_index_mid',
+    [[1, 1], [970, 250]],
+    'ad_pc_curate_index_mid',
+    'div-gpt-ad-1725868508261-0',
+    "970px",
+    '250px'
+  );
+
+  // car_pc_curate_index_mid2
+  defineAndDisplayAd(
+    '/31610311/car_pc_curate_index_mid2',
+    [[1, 1], [970, 250]],
+    'ad_pc_curate_index_mid2',
+    'div-gpt-ad-1725868546957-0',
+    "970px",
+    '250px'
+  );
+
+  // car_pc_curate_index_mid3
+  defineAndDisplayAd(
+    '/31610311/car_pc_curate_index_mid3',
+    [[1, 1], [970, 250]],
+    'ad_pc_curate_index_mid3',
+    'div-gpt-ad-1725868597445-0',
+    "970px",
+    '250px'
+  );
+
+  // //  pc_index
+  // defineAndDisplayAd(
+  //   '/31610311/car_pc_curate_index_top',
+  //   [[1, 1], [970, 250]],
+  //   'ad_pc_curate_index_top',
+  //   'div-gpt-ad-1636611569320-0'
+  // );
+
+  // // 123
+
+  // defineAndDisplayAd(
+  //   '/7682122,31610311/car_pc_index_top',
+  //   [[1, 1], [970, 250]],
+  //   'ad_pc_index_top',
+  //   'div-gpt-ad-1725868394390-0'
+  // );
+
+  // defineAndDisplayAd(
+  //  '/7682122,31610311/car_pc_index_top1',
+  //    [970, 250],
+  //  'ad_pc_index_top1',
+  //   'div-gpt-ad-1636611615414-0'
+  // );
+
+  // defineAndDisplayAd(
+  //   '/7682122,31610311/car_pc_index_top2',
+  //     [970, 250],
+  //   'ad_pc_index_top2',
+  //    'div-gpt-ad-1636611653829-0'
+  // );
+
+    //GAM360_index_mid-mid3
+  //   function defineAndDisplayAd(slotPath, dimensions, elementId, adDivId) {
+  //   window.googletag.cmd.push(function() {
+  //     window.googletag
+  //       .defineSlot(slotPath, dimensions, adDivId)
+  //       .setCollapseEmptyDiv(true, true)
+  //       .addService(googletag.pubads())
+  //     googletag.pubads().enableSingleRequest();
+  //     googletag.pubads().collapseEmptyDivs();
+  //     googletag.enableServices();
+  //   });
+
+  //   var adDiv = document.createElement("div");
+  //   adDiv.id = adDivId;
+  //   adDiv.style.width = "970px";
+  //   adDiv.style.height = "250px";
+  //   var targetElement = document.getElementById(elementId);
+  //   targetElement.appendChild(adDiv);
+
+  //   googletag.cmd.push(function() {
+  //     googletag.display(adDivId);
+  //     googletag.pubads().refresh();
+  //   });
+  // }
+
+  // defineAndDisplayAd(
+  //   '/7682122,31610311/car_pc_index_mid',
+  //    [970, 250],
+  //   'ad_pc_index_mid',
+  //   'div-gpt-ad-1696237582063-0'
+  // );
+
+  //   defineAndDisplayAd(
+  //   '/7682122,31610311/car_pc_index_mid2',
+  //    [970, 250],
+  //   'ad_pc_index_mid2',
+  //   'div-gpt-ad-1696237604856-0'
+  // );
+
+  //     defineAndDisplayAd(
+  //   '/7682122,31610311/car_pc_index_mid3',
+  //    [970, 250],
+  //   'ad_pc_index_mid3',
+  //    'div-gpt-ad-1696237625463-0'
+  // );
+
+    //GAM_pc_index_d1
+    //     window.googletag.cmd.push(function() {
+    //   googletag.pubads().enableSingleRequest();
+    //   googletag.pubads().collapseEmptyDivs();
+    //   googletag.enableServices();
+    // });
+
+    //   var ad_pc_index_d1 = document.createElement("div");
+    //   ad_pc_index_d1.id = 'div-gpt-ad-1696237834160-0';
+    //   ad_pc_index_d1.style.minWidth = "728px";
+    //   ad_pc_index_d1.style.minHeight = "90px";
+    //   var targetElement = document.getElementById("car_pc_index_d1");
+
+    //  if (targetElement) {
+    //    targetElement.appendChild(ad_pc_index_d1);
+    //    var truvidScript = document.createElement("script");
+    //    truvidScript.src = "https://go.trvdp.com/init/10358.js?pid=7750";
+    //    truvidScript.setAttribute("data-cfasync", "false");
+    //    truvidScript.async = true;
+    //    truvidScript.type = "text/javascript";
+    //    ad_pc_index_d1.appendChild(truvidScript);
+    //  }
+
+
+    //   googletag.cmd.push(function() {
+    //     googletag.display('div-gpt-ad-1696237834160-0');
+    //     googletag.pubads().refresh();
+    //   });
+</script>

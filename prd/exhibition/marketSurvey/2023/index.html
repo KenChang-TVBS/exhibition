@@ -71,56 +71,81 @@
     <!-- canonical -->
     <link
       rel="canonical"
-      href="https://cars.tvbs.com.tw/exhibition/marketSurvey/2023/index.html"/>
+      href="https://cars.tvbs.com.tw/exhibition/marketSurvey/2023/index.html"
+    />
 
     <script
       async
-      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+    ></script>
 
+    <!-- GA4 campaign_type -->
+    <script>
+      // 獲取網頁 URL
+      var url = window.location.href;
 
-<!-- GA4 campaign_type -->
-<script>
-  // 獲取網頁 URL
-  var url = window.location.href;
+      // 提取 "exhibition/" 之後的字串
+      var regex = /exhibition\/([^/]+)/;
+      var match = url.match(regex);
+      var extractedString = match && match[1] ? match[1] : null;
 
-  // 提取 "exhibition/" 之後的字串
-  var regex = /exhibition\/([^/]+)/;
-  var match = url.match(regex);
-  var extractedString = match && match[1] ? match[1] : null;
+      // 將提取的字串推送到 dataLayer
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        campaign_type: extractedString,
+      });
+    </script>
+    <!-- GA4 -->
 
-  // 將提取的字串推送到 dataLayer
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'campaign_type': extractedString
-  });
-</script>
-<!-- GA4 -->
+    <!-- 黃金線事件追蹤 Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MF6NHXP");
+    </script>
 
-<!-- 黃金線事件追蹤 Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MF6NHXP');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TC9NFS64");
+    </script>
 
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TC9NFS64');</script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MF6NHXP"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
 
-<!-- End Google Tag Manager -->
-    
-</head>
-<body>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF6NHXP"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TC9NFS64"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TC9NFS64"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <section
       data-bs-version="5.1"
@@ -488,8 +513,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      <div id="ad_pc_index_top"></div>
-      <div id="ad_m_index_top"></div>
+      <div id="ad_pc_curate_index_top"></div>
+      <div id="ad_m_curate_index_top"></div>
     </section>
 
     <section
@@ -542,8 +567,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-   <div id="ad_pc_index_mid"></div>
-      <div id="ad_m_index_list1"></div>
+      <div id="ad_pc_curate_index_mid"></div>
+      <div id="ad_m_curate_index_list1"></div>
     </section>
 
     <section
@@ -659,13 +684,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="mbr-section-btn align-center">
               <a class="btn btn-success click_poll display-4" href="poll.html"
                 ><span class="mbrib-right mbr-iconfont mbr-iconfont-btn"></span
-                >點我看<br />地球黃金線 ╳ TVBS民調中心<br />汽車購買偏好大調查<br/></a>
+                >點我看<br />地球黃金線 ╳ TVBS民調中心<br />汽車購買偏好大調查<br
+              /></a>
             </div>
           </div>
         </div>
       </div>
-    <div id="ad_pc_index_mid2"></div>
-      <div id="ad_m_index_list2"></div>
+      <div id="ad_pc_curate_index_mid2"></div>
+      <div id="ad_m_curate_index_list2"></div>
     </section>
 
     <section data-bs-version="5.1" class="content1 cid-tOc6ReVCNe" id="partB">
@@ -806,7 +832,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-     
     </section>
 
     <section
@@ -921,7 +946,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-     
     </section>
 
     <section
@@ -1113,8 +1137,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      <div id="ad_pc_index_mid3"></div>
-      <div id="ad_m_index_list3"></div>
+      <div id="ad_pc_curate_index_mid3"></div>
+      <div id="ad_m_curate_index_list3"></div>
     </section>
 
     <section data-bs-version="5.1" class="content1 cid-tOd2tzIhd9" id="partE">
@@ -1286,8 +1310,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </section>
 
     <section data-bs-version="5.1" class="share3 cid-tOcBhWYOSS" id="SNS">
-    <div id="car_pc_index_d1"></div>
-      <div id="car_m_index_d1"></div> 
+      <div id="car_pc_index_d1"></div>
+      <div id="car_m_index_d1"></div>
       <div class="container">
         <div class="media-container-row">
           <div class="col-12">
@@ -1394,8 +1418,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </section>
-    <div id="ad_m_index_bottom"></div>
-  
+    <div id="ad_m_curate_index_bottom"></div>
 
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/parallax/jarallax.js"></script>
