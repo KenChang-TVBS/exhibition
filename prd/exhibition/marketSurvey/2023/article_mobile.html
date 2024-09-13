@@ -1,0 +1,225 @@
+<style>
+  #scrollToTop {
+    bottom: 120px !important;
+  }
+  .mbr-arrow-up {
+    text-align: right !important;
+    right: 10px !important;
+  }
+  @media screen and (max-width: 1024px) {
+    #ad_pc_read_top,
+    #ad_pc_read_in1,
+    #ad_pc_read_in2,
+    #ad_pc_read_in3,
+    #ad_pc_read_in4,
+    #car_pc_read_d1 {
+      display: none !important;
+    }
+  }
+  #ad_m_read_top,
+  #ad_m_read_in1,
+  #ad_m_read_in2,
+  #ad_m_read_in3,
+  #ad_m_read_in4,
+  #car_m_read_d1 {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  #ad_m_read_bottom {
+    position: fixed;
+    bottom: 0px;
+    width: 100vw;
+    background-color: white;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #bar {
+    background: black;
+    width: 100vw;
+  }
+  #ad_bottom_span {
+    color: white;
+    display: flex;
+    font-size: 8px;
+    padding-left: 20px;
+    padding-top: 2px;
+  }
+  #bar + div {
+    height: 100px;
+  }
+  #bar > .tips {
+    margin: 0px auto;
+  }
+  #bar button {
+    position: absolute;
+    display: flex;
+    top: 0px;
+    right: 20px;
+    border: none;
+    cursor: pointer;
+    padding-top: 4px;
+  }
+  #bar button svg {
+    width: 8px;
+    aspect-ratio: 1/1;
+    fill: white;
+  }
+  #floating_promotion {
+    bottom: 170px;
+  }
+  .fly_outbox {
+    width: 100%;
+    height: 400px;
+    position: relative !important;
+    visibility: visible !important;
+    overflow: hidden !important;
+  }
+  .fly_inbox {
+    height: 100% !important;
+    width: 100% !important;
+    position: absolute !important;
+    clip: rect(0, auto, auto, 0) !important;
+  }
+  .fly_ad {
+    visibility: visible !important;
+    overflow: hidden !important;
+    position: fixed !important;
+    top: 10% !important;
+    left: 50% !important;
+    transform: translate(-50%, 0px) !important;
+  }
+</style>
+
+<script>
+    window.googletag = window.googletag || { cmd: [] };
+
+    //GAM360_m_read_top/in1/in3/in4/d1
+    function defineAndDisplayAd(slotPath, dimensions, elementId, adDivId) {
+    window.googletag.cmd.push(function() {
+      window.googletag
+        .defineSlot(slotPath, dimensions, adDivId)
+        .setCollapseEmptyDiv(true, true)
+        .addService(googletag.pubads())
+        .setTargeting("Car_channel", {{getExhibitionName}});
+      googletag.pubads().enableSingleRequest();
+      googletag.pubads().collapseEmptyDivs();
+      googletag.enableServices();
+    });
+
+    var adDiv = document.createElement("div");
+    adDiv.id = adDivId;
+    adDiv.style.minWidth = "300px";
+    adDiv.style.minHeight = "250px";
+    var targetElement = document.getElementById(elementId);
+    targetElement.appendChild(adDiv);
+
+    googletag.cmd.push(function() {
+      googletag.display(adDivId);
+      googletag.pubads().refresh();
+    });
+  }
+
+  defineAndDisplayAd(
+   '/7682122,31610311/car_m_read_top',
+     [[300, 250], [1, 1]],
+    'ad_m_read_top',
+    'div-gpt-ad-1636612489318-0'
+  );
+
+    defineAndDisplayAd(
+  '/7682122,31610311/car_m_read_in1',
+      [[1, 1], [300, 250], [336, 280]],
+    'ad_m_read_in1',
+    'div-gpt-ad-1636615782389-0'
+  );
+
+      defineAndDisplayAd(
+  '/7682122,31610311/car_m_read_in3',
+      [[300, 250], [336, 280]],
+    'ad_m_read_in3',
+    'div-gpt-ad-1636612566330-0'
+  );
+
+        defineAndDisplayAd(
+  '/7682122,31610311/car_m_read_in4',
+      [[336, 280], [300, 250]],
+    'ad_m_read_in4',
+    'div-gpt-ad-1636612592435-0'
+  );
+
+    //in2
+    window.googletag.cmd.push(function() {
+      window.googletag
+        .defineSlot('/7682122,31610311/car_m_read_in2', [[320, 480], [1, 1]], 'div-gpt-ad-1637128631009-0')
+        .setCollapseEmptyDiv(true, true)
+        .addService(googletag.pubads())
+        .setTargeting("Car_channel", {{getExhibitionName}});
+      googletag.pubads().enableSingleRequest();
+      googletag.pubads().collapseEmptyDivs();
+      googletag.enableServices();
+    });
+
+      document.getElementById("ad_m_read_in2").innerHTML=['<div class="fly_outbox">','<div class="fly_inbox">','<div class="fly_ad">','<div id="div-gpt-ad-1637128631009-0" style="min-width: 320px; min-height: 480px;">','</div>','</div>','</div>','</div>'].join("")
+
+    googletag.cmd.push(function () {
+      googletag.display("div-gpt-ad-1637128631009-0");
+      googletag.pubads().refresh();
+    });
+
+
+   //GAM360_bottom
+    document.getElementById("ad_m_read_bottom").innerHTML=['<div id="bar">'
+  ,'<span id="ad_bottom_span">廣告</span>'
+  ,'<button type="button" id="closeBtn">'
+  ,'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224.5 224.5" xml:space="preserve" class="w-2.5 fill-white">'
+  ,'<path class="close_svg__st0" d="M443.5-198.3 422.8-219 112.4 91.7-198.3-219l-20.7 20.7L91.7 112.4-219 422.8l20.7 20.7 310.7-310.7 310.4 310.7 20.7-20.7-310.7-310.4z"></path></svg>'
+  ,'</button></div>'
+  ,'<div id="div-gpt-ad-1636612657357-0" style="min-width: 320px; min-height: 100px;"></div>'].join("")
+
+    googletag.cmd.push(function() {
+    googletag.defineSlot('/7682122,31610311/car_m_read_bottom',  [[320, 100], [1, 1]], 'div-gpt-ad-1636612657357-0').addService(googletag.pubads()).setTargeting("Car_channel", {{getExhibitionName}});
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+
+  googletag.cmd.push(function() {
+    googletag.display('div-gpt-ad-1636612657357-0')
+  });
+
+  document.getElementById('closeBtn').addEventListener("click",function(){
+    document.getElementById("ad_m_read_bottom").style.display = "none";
+  })
+
+      //m_read_d1
+   window.googletag.cmd.push(function() {
+   window.googletag.defineSlot('/31610311/car_m_read_d1', [[1, 1], [300, 250]], 'div-gpt-ad-1696238127798-0').setCollapseEmptyDiv(true, true).addService(googletag.pubads()).setTargeting("Car_channel", {{getExhibitionName}});
+      googletag.pubads().enableSingleRequest();
+      googletag.pubads().collapseEmptyDivs();
+      googletag.enableServices();
+    });
+
+      var ad_m_read_d1 = document.createElement("div");
+      ad_m_read_d1.id =   'div-gpt-ad-1696238127798-0';
+      ad_m_read_d1.style.minWidth = "300px";
+      ad_m_read_d1.style.minHeight = "250px";
+      var targetElement = document.getElementById("car_m_read_d1");
+
+     if (targetElement) {
+     targetElement.appendChild(ad_m_read_d1);
+     var truvidScript = document.createElement("script");
+     truvidScript.src = "//go.trvdp.com/init/10358.js?pid=7750";
+     truvidScript.setAttribute("data-cfasync", "false");
+     truvidScript.async = true;
+     truvidScript.type = "text/javascript";
+     ad_m_read_d1.appendChild(truvidScript);
+     }
+
+      googletag.cmd.push(function() {
+        googletag.display( 'div-gpt-ad-1696238127798-0');
+        googletag.pubads().refresh();
+      });
+</script>
