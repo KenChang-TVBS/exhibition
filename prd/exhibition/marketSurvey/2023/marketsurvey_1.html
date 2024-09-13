@@ -73,43 +73,77 @@
     <script src="https://cc.tvbs.com.tw/2022supertaste/js/jquery-3.6.0.min.js"></script>
 
     <!-- canonical -->
-<link
-rel="canonical"
-href="https://cars.tvbs.com.tw/exhibition/marketSurvey/marketsurvey_1/index.html"/>
+    <link
+      rel="canonical"
+      href="https://cars.tvbs.com.tw/exhibition/marketSurvey/marketsurvey_1/index.html"
+    />
 
-<!-- GA4 campaign_type -->
-<script>
-  // 獲取網頁 URL
-  var url = window.location.href;
+    <!-- GA4 campaign_type -->
+    <script>
+      // 獲取網頁 URL
+      var url = window.location.href;
 
-  // 提取 "exhibition/" 之後的字串
-  var regex = /exhibition\/([^/]+)/;
-  var match = url.match(regex);
-  var extractedString = match && match[1] ? match[1] : null;
+      // 提取 "exhibition/" 之後的字串
+      var regex = /exhibition\/([^/]+)/;
+      var match = url.match(regex);
+      var extractedString = match && match[1] ? match[1] : null;
 
-  // 將提取的字串推送到 dataLayer
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    'campaign_type': extractedString
-  });
-</script>
-<!-- GA4 -->
+      // 將提取的字串推送到 dataLayer
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        campaign_type: extractedString,
+      });
+    </script>
+    <!-- GA4 -->
 
-<!-- 黃金線事件追蹤 Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MF6NHXP');</script>
-<!-- End Google Tag Manager -->
-    
-</head>
-<body>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MF6NHXP"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- 黃金線事件追蹤 Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MF6NHXP");
+    </script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TC9NFS64");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MF6NHXP"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TC9NFS64"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- End Google Tag Manager (noscript) -->
 
     <section
       data-bs-version="5.1"
@@ -344,7 +378,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      
     </section>
 
     <section
@@ -381,8 +414,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-    <div id="ad_pc_read_in1"></div>
-      <div id="ad_m_read_in1"></div>
+      <div id="ad_pc_curate_read_in1"></div>
+      <div id="ad_m_curate_read_in1"></div>
     </section>
 
     <section data-bs-version="5.1" class="image1 cid-tOBakuLbDj" id="image1-f8">
@@ -483,8 +516,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      <div id="ad_pc_read_in2"></div>
-      <div id="ad_m_read_in2"></div> 
+      <div id="ad_pc_curate_read_in2"></div>
+      <div id="ad_m_curate_read_in2"></div>
     </section>
 
     <section data-bs-version="5.1" class="image1 cid-tOBamd0myo" id="image1-fa">
@@ -585,8 +618,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-       <div id="ad_pc_read_in3"></div>
-      <div id="ad_m_read_in3"></div> 
+      <div id="ad_pc_curate_read_in3"></div>
+      <div id="ad_m_curate_read_in3"></div>
     </section>
 
     <section data-bs-version="5.1" class="image1 cid-tOBanfti9c" id="image1-fc">
@@ -687,7 +720,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-     
     </section>
 
     <section data-bs-version="5.1" class="image1 cid-tOBao6exGk" id="image1-fe">
@@ -1177,7 +1209,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
 
-  <div id="ad_m_read_bottom"></div>
+    <div id="ad_m_curate_read_bottom"></div>
 
     <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/smoothscroll/smooth-scroll.js"></script>
